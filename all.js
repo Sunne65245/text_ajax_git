@@ -17,7 +17,7 @@ function textPost() {
             console.log(res);
             alert(res)
         },
-        error:function(err){console.log(err)},
+        error:function(err){console.log(err)},//測試git 只推單支檔案
 
     });
 }
