@@ -1,20 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>練習</title>
-</head>
-<body>
-    <input type="text" placeholder=" 請輸入" class="text" name="">
-    <button type="button" id="search" value="送出" onclick="textSwitch()">送出</button>
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-    <h3 class="titleColor">Switch的結果</h3>
-    <div class="result">
-        <!-- 要渲染的結果 -->
+</head>
+
+<body>
+    <div class="wrap">
+        <input type="text" placeholder=" 請輸入" class="text" name="">
+        <button type="button" id="search" value="送出" onclick="textSwitch1()">送出</button>
+        <!-- <div class="buttonClass">
+            <button type="button" class="classSearch Blue" value="送出" onclick="textSwitch()">送出</button>
+            <button type="button" class="classSearch Green" value="送出" onclick="textSwitch()">送出</button>    
+            <button type="button" class="classSearch Red" value="送出" onclick="textSwitch()">送出</button>    
+        </div>
+         -->
+
     </div>
+    <form class="form-inline" role="form" id="form1" name="form1" method="POST" action="/backend/StorePay/sync_line"
+        enctype="multipart/form-data" style="display:inline;" onsubmit="return false;">
+        <table class="table-bordered table-condensed table-hover text-center ">
+            <thead>
+                <tr>
+                    <th>商家代號</th>
+                    <th>站台名稱</th>
+                    <th>商家名稱</th>
+                    <th>到期日</th>
+                    <th>地址</th>
+                    <th>email</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="test">
+                    <td class="text-right store_number" data-storenumber="168">168</td>
+                    <td class="text-right">168money</td>
+                    <td class="text-right">賣賣看</td>
+                    <td class="text-right">2022-01-30</td>
+                    <td class="text-right">高雄市前鎮區前鎮路200號20樓</td>
+                    <td class="text-right">xxxx@gmail.com</td>
+                    <td class="text-left">
+                        <button type="button" class="btn btn-default" data-sync="extension 222" data-lsn="aaa"
+                            data-storenumber="168">同步展期</button>
+                        <button type="button" class="btn btn-default" data-sync="logistics 111" data-lsn="bbb"
+                            data-storenumber="168">同步金物流</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <div class="wrap">
+        <h3 class="titleColor">Switch的結果</h3>
+        <div class="result">
+            <!-- 要渲染的結果 -->
+            <ul class="resultList">
+                <li class="Blue">結果要顯示的地方</li>
+                <li class="Green">結果要顯示的地方</li>
+                <li class="Yellow">結果要顯示的地方</li>
+                <li class="RedOrange">結果要顯示的地方</li>
+                <li class="Red">結果要顯示的地方</li>
+            </ul>
+        </div>
+    </div>
+
 </body>
-<script src="https://code.jquery.com/jquery-3.4.1.js"
-integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="crossorigin="anonymous"></script>
+
+
 <script src="all.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </html>
